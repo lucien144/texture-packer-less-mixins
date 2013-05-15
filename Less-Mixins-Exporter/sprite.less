@@ -1,0 +1,16 @@
+// Created with TexturePacker (http://www.texturepacker.com) - Copyright 2013 Damien SEGUIN
+// {{smartUpdateKey}}
+
+// HTML:
+// <i class="sprite ico-pin"></i>
+// 
+// CSS:
+// body .selector .ico-pin {
+//     .ico-pin-small-blue();
+// }
+
+.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(sprite.png);}
+.sprite() {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(sprite.png);}
+
+{% for sprite in allSprites %}.{{sprite.trimmedName}}() { width: {{sprite.frameRect.width}}px; height: {{sprite.frameRect.height}}px; background-position: -{{sprite.frameRect.x}}px -{{sprite.frameRect.y}}px }
+{% endfor %}

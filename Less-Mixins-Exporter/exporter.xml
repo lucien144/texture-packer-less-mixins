@@ -1,0 +1,49 @@
+<exporter version="1.0">
+  <!-- identifier of the exporter -->
+  <name>Less-Mixins-Exporter</name>
+ 
+  <!-- display name of the exporter for the combo box -->
+  <displayName>Less Mixins (css)</displayName>
+ 
+  <!-- description of the exporter -->
+  <description>A custom exporter that generate LESS Mixins with your sprites</description>
+ 
+  <!-- exporter version -->
+  <version>1.0</version>
+ 
+  <!-- currently only one file allowed -
+       more to come soon -->
+  <files>
+      <file>
+          <!-- name of this file variable -->
+          <name>less-mixins-exporter</name>
+ 
+          <!-- human readable name (for GUI) -->
+          <displayName>LESS Mixins SpriteSheet</displayName>
+ 
+          <!-- file extension for the file -->
+          <fileExtension>less</fileExtension>
+ 
+          <!-- name of the template file -->
+          <template>sprite.less</template>
+      </file>
+  </files>
+ 
+  <!-- target framework supports trimming -->
+  <supportsTrimming>yes</supportsTrimming>
+ 
+  <!-- target framework supports rotated sprites -->
+  <supportsRotation>no</supportsRotation>
+ 
+  <!-- rotated sprites direction (cw/ccw) -->
+  <rotationDirection>cw</rotationDirection>
+ 
+  <!-- supports npot sizes -->
+  <supportsNPOT>yes</supportsNPOT>
+ 
+  <!-- supports file name stripping (remove .png etc.) -->
+  <supportsTrimSpriteNames>yes</supportsTrimSpriteNames>
+ 
+  <!-- supports texture subpath -->
+  <supportsTextureSubPath>yes</supportsTextureSubPath>
+</exporter>
