@@ -1,4 +1,5 @@
 // Created with TexturePacker (http://www.texturepacker.com) - Copyright 2013 Damien SEGUIN
+// Copyright 2014 Jan Blasko - http://lucien144.net
 // {{smartUpdateKey}}
 
 // HTML:
@@ -9,8 +10,12 @@
 //     .ico-pin-small-blue();
 // }
 
-.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(sprite.png);}
-.sprite() {display:inline-block; overflow:hidden; background-repeat: no-repeat;background-image:url(sprite.png);}
+@spritePath: "../images/sprites.png";
 
-{% for sprite in allSprites %}.{{sprite.trimmedName}}() { width: {{sprite.frameRect.width}}px; height: {{sprite.frameRect.height}}px; background-position: -{{sprite.frameRect.x}}px -{{sprite.frameRect.y}}px }
+.sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat; background-image:url(@spritePath); text-indent: 100%; white-space: nowrap; overflow: hidden; }
+.sprite() {display:inline-block; overflow:hidden; background-repeat: no-repeat; background-image:url(@spritePath); text-indent: 100%; white-space: nowrap; overflow: hidden; }
+
+{% for sprite in allSprites %}
+.{{sprite.trimmedName}}() { width: {{sprite.frameRect.width}}px; height: {{sprite.frameRect.height}}px; background-position: -{{sprite.frameRect.x}}px -{{sprite.frameRect.y}}px; }
+.{{sprite.trimmedName}} { width: {{sprite.frameRect.width}}px; height: {{sprite.frameRect.height}}px; background-position: -{{sprite.frameRect.x}}px -{{sprite.frameRect.y}}px }
 {% endfor %}
