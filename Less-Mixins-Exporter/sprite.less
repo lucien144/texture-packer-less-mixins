@@ -10,6 +10,8 @@
 //     .ico-pin-small-blue();
 // }
 
+{% load makepseudocssselector %}
+
 @spritePath: "../images/sprites.png";
 
 .sprite {display:inline-block; overflow:hidden; background-repeat: no-repeat; background-image:url(@spritePath); text-indent: 100%; white-space: nowrap; overflow: hidden; }
@@ -17,5 +19,5 @@
 
 {% for sprite in allSprites %}
 .{{sprite.trimmedName}}() { width: {{sprite.frameRect.width}}px; height: {{sprite.frameRect.height}}px; background-position: -{{sprite.frameRect.x}}px -{{sprite.frameRect.y}}px; }
-.{{sprite.trimmedName}} { width: {{sprite.frameRect.width}}px; height: {{sprite.frameRect.height}}px; background-position: -{{sprite.frameRect.x}}px -{{sprite.frameRect.y}}px }
+.{{sprite.trimmedName|makepseudocssselector}}, .{{sprite.trimmedName}} { width: {{sprite.frameRect.width}}px; height: {{sprite.frameRect.height}}px; background-position: -{{sprite.frameRect.x}}px -{{sprite.frameRect.y}}px }
 {% endfor %}
