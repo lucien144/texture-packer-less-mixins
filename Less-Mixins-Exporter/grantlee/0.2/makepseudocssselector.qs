@@ -17,3 +17,12 @@ var MakePseudoCSSSelectorFilter = function(input)
 MakePseudoCSSSelectorFilter.filterName = "makepseudocssselector";
 MakePseudoCSSSelectorFilter.isSafe = false;
 Library.addFilter("MakePseudoCSSSelectorFilter");
+
+var HasPseudoCSSSelector = function(input)
+{
+  var input = input.rawString();
+  return new RegExp(/-active|-focus|-hover|-visited|-checked|-disabled/gi).test(input) ? "true" : "";
+};
+HasPseudoCSSSelector.filterName = "haspseudocssselector";
+HasPseudoCSSSelector.isSafe = false;
+Library.addFilter("HasPseudoCSSSelector");
