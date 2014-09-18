@@ -33,6 +33,6 @@
 	.{{sprite.trimmedName|clean}} { width: {{sprite.frameRect.width}}px; height: {{sprite.frameRect.height}}px; background-position: -{{sprite.frameRect.x}}px -{{sprite.frameRect.y}}px }
 	{% endif %}
 	{% if sprite.trimmedName|ishighdensity %}
-	.{{sprite.trimmedName|removehighdensity}} { @media @highdensity { background-image: url('../images/{{texture.trimmedName}}/{{sprite.fullName}}'); background-size: {{sprite.frameRect.width}}/2px {{sprite.frameRect.height}}/2px; background-position: 0 0; } }
+	.{{sprite.trimmedName|removehighdensity}} { @media @highdensity { background-image: url('../images/{{texture.trimmedName}}/{{sprite.fullName}}') !important; background-size: {{sprite.frameRect.width}}/2px {{sprite.frameRect.height}}/2px !important; background-position: 0 0 !important; } }
 	{% endif %}
 {% endfor %}
