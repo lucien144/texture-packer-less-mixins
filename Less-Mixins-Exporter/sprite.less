@@ -27,6 +27,8 @@
 
 {% for sprite in allSprites %}
 	.{{sprite.trimmedName|clean}}() { width: {{sprite.frameRect.width}}px; height: {{sprite.frameRect.height}}px; background-position: -{{sprite.frameRect.x}}px -{{sprite.frameRect.y}}px; }
+	@{{sprite.trimmedName|clean}}-x: -{{sprite.frameRect.x}}px;
+	@{{sprite.trimmedName|clean}}-y: -{{sprite.frameRect.y}}px;
 	{% if sprite.trimmedName|haspseudocssselector %}
 	.{{sprite.trimmedName|clean|makepseudocssselector}}, .{{sprite.trimmedName|clean}} { width: {{sprite.frameRect.width}}px; height: {{sprite.frameRect.height}}px; background-position: -{{sprite.frameRect.x}}px -{{sprite.frameRect.y}}px }
 	{% else %}
