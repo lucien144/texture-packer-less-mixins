@@ -29,7 +29,7 @@
 	.{{sprite.trimmedName|clean}}() { width: {{sprite.frameRect.width}}px; height: {{sprite.frameRect.height}}px; background-position: -{{sprite.frameRect.x}}px -{{sprite.frameRect.y}}px; }
 	@{{sprite.trimmedName|clean}}-x: -{{sprite.frameRect.x}}px;
 	@{{sprite.trimmedName|clean}}-y: -{{sprite.frameRect.y}}px;
-	@{{sprite.trimmedName|clean}}-width: {{sprite.frameRect.height}}px;
+	@{{sprite.trimmedName|clean}}-width: {{sprite.frameRect.width}}px;
 	@{{sprite.trimmedName|clean}}-height: {{sprite.frameRect.height}}px;
 	{% if sprite.trimmedName|haspseudocssselector %}
 	.{{sprite.trimmedName|clean|makepseudocssselector}}, .{{sprite.trimmedName|clean}} { width: {{sprite.frameRect.width}}px; height: {{sprite.frameRect.height}}px; background-position: -{{sprite.frameRect.x}}px -{{sprite.frameRect.y}}px }
